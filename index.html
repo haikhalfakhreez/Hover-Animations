@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Animations</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&family=Inter:wght@400;500;600&family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main-page.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <!--  Fixed header on top -->
+    <header>
+        <h1 class="logo"><span>Hover</span> Animations</h1>
+        
+        <nav>
+            <ul class="nav-large">
+                <li>Browse</li>
+                <li>How to Use</li>
+                <li>About</li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-sidebar">
+                <li>Browse</li>
+                <li>How to Use</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main body display -->
+    <main>
+        <!-- First section -->
+        <section class="first-section">
+            <div class="container-first">
+                <h2>Different style of Animations.<br>Now yours.</h2>
+                <p>Get creative with animations for your links, buttons, images, logos, and so on. Easily copy & paste the CSS code, and apply 
+                    the specified class to your element. Get inspired and modify it on your own!
+                </p>
+                <button id="front-btn" class="front-btn">Download on GitHub</button>
+            </div>
+        </section>
+
+        <!-- Second section -->
+        <section class="second-section">
+            <div class="container-second">
+                <h3>How to Use</h3>
+
+            </div>
+        </section>
+
+        <!-- Third section -->
+        <section class="third-section">
+            <div class="container-third">
+                <h3>Background Animations</h3>
+                    <ul class="cards">
+                        <li id="slide-left" class="btn slide-left"><span>Slide Left</span></li>
+                        <li id="slide-right" class="btn slide-right"><span>Slide Right</span></li>
+                        <li id="slide-up" class="btn slide-up"><span>Slide Up</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                    </ul>
+            </div>
+        </section>
+
+        <!-- Fourth section -->
+        <section class="third-section">
+            <div class="container-third">
+                <h3>Transition Animations</h3>
+                    <ul class="cards">
+                        <li id="slide-left" class="btn slide-left"><span>Slide Left</span></li>
+                        <li id="slide-right" class="btn slide-right"><span>Slide Right</span></li>
+                        <li id="slide-up" class="btn slide-up"><span>Slide Up</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                        <li id="slide-down" class="btn slide-down"><span>Slide Down</span></li>
+                    </ul>
+            </div>
+        </section>
+
+
+
+
+        <!-- Hidden pop-up window -->
+        <div class="big">
+            <div class="small" onclick="event.stopPropagation();">
+                <div class="head-for-popup">
+                    <span>CSS Code</span>
+                    <div class="close-btn">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                    </div>
+                </div>
+<!-- pre1 -->
+                <pre id="pre1">
+<span>.slide-left</span> {
+  position: relative;
+}
+<span>.slide-left:before</span> {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #dadce0;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 0.3s ease-out;
+}
+<span>.slide-left:hover:before, .slide-left:focus:before, .slide-left:active:before</span> {
+  transform: scaleX(1);
+}
+                </pre>
+
+<!-- pre2 -->
+                <pre id="pre2">
+<span>.slide-right</span> {
+  position: relative;
+}
+<span>.slide-right:before</span> {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #dadce0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease-out;
+}
+<span>.slide-right:hover:before, .slide-right:focus:before, .slide-right:active:before</span> {
+  transform: scaleX(1);
+}
+                </pre>
+
+<!-- pre3 -->
+                <pre id="pre3">
+<span>.slide-up</span> {
+  position: relative;
+}
+<span>.slide-up:before</span> {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0  
+  background: #dadce0;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform 0.3s ease-out;
+}
+<span>.slide-up:hover:before, .slide-up:focus:before, .slide-up:active:before</span> {
+  transform: scaleY(1);
+}
+                </pre>
+
+<!-- pre4 -->
+                <pre id="pre4">
+<span>.slide-down</span> {
+  position: relative;
+}
+<span>.slide-down:before</span> {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #dadce0;
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform 0.3s ease-out;
+}
+<span>.slide-down:hover:before, .slide-down:focus:before, .slide-down:active:before</span> {
+  transform: scaleY(1);
+}                    
+                </pre>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
