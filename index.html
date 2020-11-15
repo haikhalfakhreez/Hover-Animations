@@ -7,27 +7,31 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&family=Inter:wght@400;500;600&family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main-page.css">
-    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="CSS/main-page.css">
+    <link rel="stylesheet" href="CSS/hover-animations.css">
 
     <!-- Hightlight.js -->
     <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/vs.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e699a2c4a5.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!------------------------------------------------------------------------------------------------------
                                                 Navbar 
 ------------------------------------------------------------------------------------------------------->
+<a class="anchor" id="page-top"></a>
     <header>
-        <h1 class="logo"><span>Hover</span> Animations</h1>
+        <h1 class="logo"><a href="#page-top"><span>Hover</span> Animations</a></h1>
         
         <nav>
             <ul class="nav-large">
-                <li>Browse</li>
-                <li>How to Use</li>
-                <li>About</li>
+                <li><a class="nav-links" href="#browse">Browse</a></li>
+                <li><a class="nav-links" href="#how-to-use">How to Use</a></li>
+                <li><a class="nav-links" href="#about">About</a></li>
             </ul>
             <div class="burger">
                 <div></div>
@@ -35,9 +39,9 @@
                 <div></div>
             </div>
             <ul class="nav-sidebar">
-                <li>Browse</li>
-                <li>How to Use</li>
-                <li>About</li>
+                <li><a class="sidebar-links" href="#browse">Browse</a></li>
+                <li><a class="sidebar-links" href="#how-to-use">How to Use</a></li>
+                <li><a class="sidebar-links" href="#about">About</a></li>
             </ul>
         </nav>
     </header>
@@ -46,28 +50,46 @@
                                             Main content 
 ------------------------------------------------------------------------------------------------------->
     <main>
-        <!-- First section -->
+        <!-- Front Page -->
         <section class="first-section">
             <div class="container-first">
                 <h2>Different style of Animations.<br>Now yours.</h2>
                 <p>Get creative with animations for your links, buttons, images, logos, and so on. Easily copy & paste the CSS code, and apply 
                     the specified class to your element. Get inspired and modify it on your own!
                 </p>
-                <button id="front-btn" class="front-btn">Download on GitHub</button>
+                <a href="https://github.com/haikhalfakhreez/Hover-Animations" target="_blank" id="front-btn" class="front-btn">Download on GitHub</a>
             </div>
         </section>
 
-        <!-- Second section -->
+        <!-- How to Use -->
         <section class="second-section">
             <div class="container-second">
+              <a class="anchor" id="how-to-use"></a>
                 <h3>How to Use</h3>
 
+                  <h4>A. Copy and Paste</h4>
+                    <ol>
+                      <li>Find the desired effect/animation.</li>
+                          <div id="demo-div" class="demo-div btn glow-around"><span>Glow Around</span></div>
+                      <li>Click on it to open a pop-up window with its CSS.</li>
+<pre class="demo-code"><code class="css">.glow-around {
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+.glow-around:hover, .glow-around:focus, .glow-around:active {
+  box-shadow: 0 0 10px #aaa !important;
+}</code></pre>
+                      <li>Copy the codes and paste it in your own styesheet.</li>
+                      <li>In the HTML, add the correct class.</li>
+<pre class="demo-code"><code class="html">&lt;a href="#" class="glow-around"&gt;My Button&lt;/a&gt;</code></pre>
+                    </ol>
             </div>
         </section>
 
         <!-- Third section - Background Animations -->
         <section class="third-section">
             <div class="container-third">
+              <a class="anchor" id="browse"></a>
                 <h3>Background Animations</h3>
                     <ul class="cards">
                         <li id="slide-left" class="btn slide-left"><span>Slide Left</span></li>
@@ -120,21 +142,38 @@
                     <li id="corner-fill" class="btn corner-fill"><span>Corner Fill</span></li>
                   </ul>
           </div>
-      </section>
+        </section>
 
-      <!-- Sixth section - Shadow Animations -->
-      <section class="third-section">
-        <div class="container-third">
-            <h3>Shadow Animations</h3>
-                <ul class="cards">
-                  <li id="glow-around" class="btn glow-around"><span>Glow Around</span></li>
-                  <li id="glow-inset" class="btn glow-inset"><span>Glow Inset</span></li>
-                  <li id="shadow-outset" class="btn shadow-outset"><span>Shadow Outset</span></li>
-                  <li id="float-outset" class="btn float-outset"><span>Float Outset</span></li>
-                  <li id="float-shadow" class="btn float-shadow"><span>Float Shadow</span></li>
-                </ul>
-        </div>
-    </section>
+        <!-- Sixth section - Shadow Animations -->
+        <section class="third-section">
+          <div class="container-third">
+              <h3>Shadow Animations</h3>
+                  <ul class="cards">
+                    <li id="glow-around" class="btn glow-around"><span>Glow Around</span></li>
+                    <li id="glow-inset" class="btn glow-inset"><span>Glow Inset</span></li>
+                    <li id="shadow-outset" class="btn shadow-outset"><span>Shadow Outset</span></li>
+                    <li id="float-outset" class="btn float-outset"><span>Float Outset</span></li>
+                    <li id="float-shadow" class="btn float-shadow"><span>Float Shadow</span></li>
+                  </ul>
+          </div>
+        </section>
+
+        <hr class="divider">
+        <!-- About Section -->
+        <section class="third-section">
+          <div class="container-third">
+            <div class="about">
+              <a class="anchor" id="about"></a>
+              <h3 >About</h3>
+              <p>Hover Animations are all about simplicity. All animations are made using single element, together with the help of 
+                 their pseudo-elements. No SVG and complex CSS involved. All CSS codes are provided on click, so you can easily copy 
+                 and paste them.</p>
+              <p><strong>Disclaimer.</strong> The CSS animations may not be supported in older browsers. It is advisable to provide fallback values when applying.</p>
+              <p>For more info or to get the full code, see on <a href="https://github.com/haikhalfakhreez/Hover-Animations" target="_blank">GitHub</a>.</p>
+            </div>        
+          </div>
+        </section>
+
 
 <!------------------------------------------------------------------------------------------------------
                                         Hidden pop-up window 
@@ -154,7 +193,7 @@
 ------------------------------------------------------------------------------------------------------->
 <!----------------- 1. Background Animations ----------------->
 <!------- pre1 ------->
-<pre id="pre1"><code>.slide-left {
+<pre id="pre1" class="pres"><code>.slide-left {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -177,7 +216,7 @@
 }</code></pre>
 
 <!------- pre2 ------->
-<pre id="pre2"><code>.slide-right {
+<pre id="pre2" class="pres"><code>.slide-right {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -200,7 +239,7 @@
 }</code></pre>
 
 <!------- pre3 ------->
-<pre id="pre3"><code>.slide-up {
+<pre id="pre3" class="pres"><code>.slide-up {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -223,7 +262,7 @@
 }</ode></pre>
 
 <!------- pre4 ------->
-<pre id="pre4"><code>.slide-down {
+<pre id="pre4" class="pres"><code>.slide-down {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -246,7 +285,7 @@
 }</code></pre>
 
 <!------- pre5 ------->
-<pre id="pre5"><code>.background-in {
+<pre id="pre5" class="pres"><code>.background-in {
   position: relative;   
   background: #dadce0;
   transform: perspective(0px);
@@ -269,7 +308,7 @@
 }</code></pre>
 
 <!------- pre6 ------->
-<pre id="pre6"><code>.background-out {
+<pre id="pre6" class="pres"><code>.background-out {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -291,7 +330,7 @@
 }</code></pre>
 
 <!------- pre7 ------->
-<pre id="pre7"><code>.horizontal-window-in {
+<pre id="pre7" class="pres"><code>.horizontal-window-in {
   position: relative;
   background: #dadce0;
   transform: perspective(0px);
@@ -315,7 +354,7 @@
 }</code></pre>
 
 <!------- pre8 ------->
-<pre id="pre8"><code>.horizontal-window-out {
+<pre id="pre8" class="pres"><code>.horizontal-window-out {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -338,7 +377,7 @@
 }</code></pre>
 
 <!------- pre9 ------->
-<pre id="pre9"><code>.vertical-window-in {
+<pre id="pre9" class="pres"><code>.vertical-window-in {
   position: relative;
   background: #dadce0;
   transform: perspective(0px);
@@ -362,7 +401,7 @@
 }</code></pre>
 
 <!------- pre10 ------->
-<pre id="pre10"><code>.vertical-window-out {
+<pre id="pre10" class="pres"><code>.vertical-window-out {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -386,7 +425,7 @@
 
 <!----------------- 2. Transition Animations ----------------->
 <!------- pre11 ------->
-<pre id="pre11"><code>.move-left {
+<pre id="pre11" class="pres"><code>.move-left {
   background: #fff;
   transition: transform 0.3s ease-out;
 }
@@ -395,7 +434,7 @@
 }</code></pre>
 
 <!------- pre12 ------->
-<pre id="pre12"><code>.move-right {
+<pre id="pre12" class="pres"><code>.move-right {
   background: #fff;
   transition: transform 0.3s ease-out;
 }
@@ -404,7 +443,7 @@
 }</code></pre>
 
 <!------- pre13 ------->
-<pre id="pre13"><code>.float {
+<pre id="pre13" class="pres"><code>.float {
   background: #fff;
   transition: transform 0.3s ease-out;
 }
@@ -413,7 +452,7 @@
 }</code></pre>
 
 <!------- pre14 ------->
-<pre id="pre14"><code>.dive {
+<pre id="pre14" class="pres"><code>.dive {
   background: #fff;
   transition: transform 0.3s ease-out;
 }
@@ -422,7 +461,7 @@
 }</code></pre>
 
 <!------- pre15 ------->
-<pre id="pre15"><code>.shrink {
+<pre id="pre15" class="pres"><code>.shrink {
   background: #fff;
   transition: transform 0.3s ease-out;
 }
@@ -431,7 +470,7 @@
 }</code></pre>
 
 <!------- pre16 ------->
-<pre id="pre16"><code>.grow {
+<pre id="pre16" class="pres"><code>.grow {
   background: #fff;
   transition: transform 0.3s ease-out;
 }
@@ -440,7 +479,7 @@
 }</code></pre>
 
 <!------- pre17 ------->
-<pre id="pre17"><code>.pop-in {
+<pre id="pre17" class="pres"><code>.pop-in {
   background: #fff;
 }
 .pop-in:hover, .pop-in:focus, .pop-in:active {
@@ -453,7 +492,7 @@
 }</code></pre>
 
 <!------- pre18 ------->
-<pre id="pre18"><code>.pop-out {
+<pre id="pre18" class="pres"><code>.pop-out {
   background: #fff;
 }
 .pop-out:hover, .pop-out:focus, .pop-out:active {
@@ -466,7 +505,7 @@
 }</code></pre>
 
 <!------- pre19 ------->
-<pre id="pre19"><code>.shake-horizontal {
+<pre id="pre19" class="pres"><code>.shake-horizontal {
   background: #fff;
 }
 .shake-horizontal:hover, .shake-horizontal:focus, .shake-horizontal:active {
@@ -494,7 +533,7 @@
 }</code></pre>
 
 <!------- pre20 ------->
-<pre id="pre20"><code>.shake-vertical {
+<pre id="pre20" class="pres"><code>.shake-vertical {
   background: #fff;
 }
 .shake-vertical:hover, .shake-vertical:focus, .shake-vertical:active {
@@ -523,7 +562,7 @@
 
 <!----------------- 3. Border Animations ----------------->
 <!------- pre21 ------->
-<pre id="pre21"><code>.underline-border {
+<pre id="pre21" class="pres"><code>.underline-border {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -544,7 +583,7 @@
 }</code></pre>
 
 <!------- pre22 ------->
-<pre id="pre22"><code>.underline-left {
+<pre id="pre22" class="pres"><code>.underline-left {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -565,7 +604,7 @@
 }</code></pre>
 
 <!------- pre23 ------->
-<pre id="pre23"><code>.underline-right {
+<pre id="pre23" class="pres"><code>.underline-right {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -586,7 +625,7 @@
 }</code></pre>
 
 <!------- pre24 ------->
-<pre id="pre24"><code>.underline-center {
+<pre id="pre24" class="pres"><code>.underline-center {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -608,7 +647,7 @@
 }</code></pre>
 
 <!------- pre25 ------->
-<pre id="pre25"><code>.border-in {
+<pre id="pre25" class="pres"><code>.border-in {
   position: relative;
   background: #fff;
 
@@ -636,7 +675,7 @@
 }</code></pre>
 
 <!------- pre26 ------->
-<pre id="pre26"><code>.border-out {
+<pre id="pre26" class="pres"><code>.border-out {
   position: relative;
   background: #fff;
 
@@ -662,7 +701,7 @@
 }</code></pre>
 
 <!------- pre27 ------->
-<pre id="pre27"><code>.wave-in {
+<pre id="pre27" class="pres"><code>.wave-in {
   position: relative;
   background: #fff;
 
@@ -694,7 +733,7 @@
 }</code></pre>
 
 <!------- pre28 ------->
-<pre id="pre28"><code>.wave-out {
+<pre id="pre28" class="pres"><code>.wave-out {
   position: relative;
   background: #fff;
 
@@ -725,7 +764,7 @@
 }</code></pre>
 
 <!------- pre29 ------->
-<pre id="pre29"><code>.gradient-border {
+<pre id="pre29" class="pres"><code>.gradient-border {
   position: relative;
   background: #fff;
   border: transparent !important;
@@ -763,7 +802,7 @@
 }</code></pre>
 
 <!------- pre30 ------->
-<pre id="pre30"><code>.corner-fill {
+<pre id="pre30" class="pres"><code>.corner-fill {
   position: relative;
   background: #fff;
   transform: perspective(0px);
@@ -792,7 +831,8 @@
 
 <!----------------- 4. Shadow Animations ----------------->
 <!------- pre31 ------->
-<pre id="pre31"><code>.glow-around {
+<pre id="pre31" class="pres"><code>.glow-around {
+  background: #fff;
   transition: box-shadow 0.3s;
 }
 .glow-around:hover, .glow-around:focus, .glow-around:active {
@@ -800,7 +840,8 @@
 }</code></pre>
 
 <!------- pre32 ------->
-<pre id="pre32"><code>.glow-inset {
+<pre id="pre32" class="pres"><code>.glow-inset {
+  background: #fff;
   transition: box-shadow 0.3s;
 }
 .glow-inset:hover, .glow-inset:focus, .glow-inset:active {
@@ -808,7 +849,8 @@
 }</code></pre>
 
 <!------- pre33 ------->
-<pre id="pre33"><code>.shadow-outset {
+<pre id="pre33" class="pres"><code>.shadow-outset {
+  background: #fff;
   transition: box-shadow 0.3s;
 }
 .shadow-outset:hover, .shadow-outset:focus, .shadow-outset:active {
@@ -816,7 +858,8 @@
 }</code></pre>
 
 <!------- pre34 ------->
-<pre id="pre34"><code>.float-outset {
+<pre id="pre34" class="pres"><code>.float-outset {
+  background: #fff;
   transition: transform, box-shadow, 0.3s;
 }
 .float-outset:hover, .float-outset:focus, .float-outset:active {
@@ -825,8 +868,9 @@
 }</code></pre>
 
 <!------- pre35 ------->
-<pre id="pre35"><code>.float-shadow {
+<pre id="pre35" class="pres"><code>.float-shadow {
   position: relative;
+  background: #fff;
   transition: transform 0.3s;
 }
 .float-shadow::before {
@@ -858,6 +902,14 @@
                                                 Footer 
 ------------------------------------------------------------------------------------------------------->
     <footer>
+      <div class="footer-container">
+        <h5 class="logo-bottom"><span>Hover</span> Animations</h5>
+        <span class="copyright">&copy; Hover Animations. Designed and built by <a href="https://haikhalfakhreez.github.io/Portfolio/" target="_blank">Haikhal&nbsp;Fakhreez</a>.</span>
+        <div class="socials">
+          <a href="https://github.com/haikhalfakhreez" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/haikhalfakhreez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
