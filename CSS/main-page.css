@@ -4,11 +4,21 @@
     --blue: rgb(0, 102, 255);
     --gray: #646369;
     --gray-dark: #141319;
-    --light-bg: #f7f7f8;
+    --light-bg: #eaeaf8;
     --selection: #bed4ff;
     --popup-bg: #f6f7f8;
     --darker-gray: #babcc0;
     --link-color: #06f;
+    --logo-color: rgb(3, 45, 109);
+    --rainbow: linear-gradient(60deg,
+    hsl(224, 85%, 66%),
+    hsl(269, 85%, 66%),
+    hsl(314, 85%, 66%),
+    hsl(359, 85%, 66%),
+    hsl(44, 85%, 66%),
+    hsl(89, 85%, 66%),
+    hsl(134, 85%, 66%),
+    hsl(179, 85%, 66%));
 
     --main: 'Poppins', sans-serif;
     --mono: 'Inconsolata', monospace;
@@ -57,17 +67,20 @@ header{
     border-bottom: 1px solid var(--border);
 }
 
-.logo a{
-    font-family: var(--main);
-    font-weight: 700;
-    font-size: 1.5em;
-    text-decoration: none;
-    color: #000;
-}
 .logo a span{
     font-family: var(--main);
-    font-weight: 300;
-    font-size: 20px
+    font-weight: 800;
+    font-size: 25px;
+    background: var(--rainbow);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.logo a {
+    font-family: var(--main);
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--logo-color);
+    text-decoration: none;
 }
 
 nav{
@@ -209,18 +222,17 @@ nav .nav-sidebar.open::after{
 }
 
 .front-btn{
-    align-self: center;
     padding: 1rem 2rem;
     margin: 2.5em 0 0;
-    background-color: transparent;
+    background-color: var(--blue);
     border: 1px solid #aaacb0;
     cursor: pointer;
     user-select: none;
     font-size: .9em;
-    font-weight: 600;
+    font-weight: 500;
     font-family: var(--main);
     text-decoration: none;
-    color: var(--gray-dark);
+    color: #fff;
 }
 .front-btn:hover{
     border: 1px solid var(--gray);
@@ -498,15 +510,19 @@ footer{
     align-items: center;
 }
 
-.logo-bottom {
-    font-family: var(--main);
-    font-weight: 700;
-    font-size: 1.3em;
-}
 .logo-bottom span{
     font-family: var(--main);
-    font-weight: 300;
-    font-size: 17px
+    font-weight: 800;
+    font-size: 22px;
+    background: var(--rainbow);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.logo-bottom{
+    font-family: var(--main);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--logo-color);
 }
 
 .copyright{
@@ -700,7 +716,7 @@ pre code::-webkit-scrollbar-thumb:hover {
                             General Media Queries
 ------------------------------------------------------------------------ */
 @media (max-width: 660px) {
-    .container-first p, .container-second ol li, .demo-code code,.demo-code code span{
+    .container-first p, .container-second ol li, .demo-code code,.demo-code code span, .pres code, .pres code span{
         font-size: 13.5px;
     }
     .about p{
