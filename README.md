@@ -41,7 +41,7 @@ For example, if you want to get the Glow Around effect:
 
 Happy styling!
 
-### MIT License
+## MIT License
 
 Copyright (c) 2020 Haikhal Fakhreez
 
@@ -65,7 +65,6 @@ SOFTWARE.
 
 ## Hire Me
 
-Haikhal Fakhreez - [See Portfolio](https://haikhalfakhreez.github.io/Portfolio/)
-Contact: **haikhalfakhreez@gmail.com**
+Haikhal Fakhreez - [See Portfolio](https://haikhalfakhreez.github.io/Portfolio/)   |   Contact: **haikhalfakhreez@gmail.com**
 
 Front-end Developer. A passionate coder. Self-taught.
