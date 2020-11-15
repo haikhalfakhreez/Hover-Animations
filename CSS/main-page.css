@@ -100,6 +100,9 @@ nav .burger div{
     margin: 4px;
     background-color: var(--gray);
 }
+nav .burger:hover div{
+    background-color: var(--gray-dark);
+}
 
 nav .nav-sidebar{
     list-style: none;
