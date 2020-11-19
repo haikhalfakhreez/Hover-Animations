@@ -12,7 +12,7 @@ Hover Animations are all about simplicity. All animations are made using single 
 
 ***Disclaimer***. *The CSS animations may not be supported in older browsers. It is advisable to provide fallback values when applying.*
 
-## How to Use
+## ⚙ How to Use
 Since the CSS for all the animations can be easily found in the [demo](https://haikhalfakhreez.github.io/Hover-Animations/), it is recommended to just simply copy and paste the code directly.
 
 ### A. Copy and Paste

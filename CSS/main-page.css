@@ -323,6 +323,10 @@ nav .nav-sidebar.open::after{
     overflow: auto;
 }
 
+.extra-notes{
+    margin-top: 2rem;
+}
+
 @media (max-width: 500px) {
     .second-section {
         clip-path: polygon(100% 0, 0 10%, 0 100%, 100% 100%, 100% 0);
