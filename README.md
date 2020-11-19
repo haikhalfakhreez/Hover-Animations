@@ -5,7 +5,7 @@ Get creative with animations for your links, buttons, images, logos, and so on. 
 - [Demo](https://haikhalfakhreez.github.io/Hover-Animations/)
 - [How to Use](#how-to-use)
 
-## What is Hover Animations?
+## ℹ What is Hover Animations?
 Hover Animations is a collection of CSS styles. 
 
 Hover Animations are all about simplicity. All animations are made using single element, together with the help of their pseudo-elements (```::before``` and ```::after```). No SVG and complex CSS involved. All CSS codes are provided on click, so you can easily copy and paste them.
@@ -41,7 +41,7 @@ For example, if you want to get the Glow Around effect:
 
 Happy styling!
 
-## MIT License
+## 📄 MIT License
 
 Copyright (c) 2020 Haikhal Fakhreez
 
